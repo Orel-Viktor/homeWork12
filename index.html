@@ -9,17 +9,96 @@
   <body>
     <div class="container">
       <h1>TODO</h1>
-
       <form action="#" class="js--form">
         <input type="text" class="js--input" name="incomingText" />
         <button class="js--button">Добавить</button>
       </form>
-      <br>
+      <br />
       <h2>TODOS</h2>
-      <div class="js--myTasks"></div>
-      
-     
+      <div class="js--myTasks" style="margin-bottom: 100px"></div>
+
+      <!-- CREDIT CARD -->
+
+      <div class="credit-card-inner">
+        <form action="#" id="credit-card-inner-form" class="credit-card-inner__form">
+          <div class="credit-card-inner__number">
+            <label for="credit-car-inner-number">Card number:</label>
+            <input type="password" name="number" id="credit-car-inner-number" maxlength="16"
+            minlength="16" required/>
+          </div>
+          <!-- /////////credit-card-inner__number -->
+          <div class="credit-card-inner__name">
+            <label for="credit-card-inner-name">Name:</label>
+            <input type="text" name="name" id="credit-card-inner-name" required/>
+          </div>
+          <!-- //////credit-card-inner__name -->
+
+          <div class="credit-card-inner__date-cw">
+            <div class="credit-card-inner__month">
+              <label for="credit-card-inner-month">Expiration Date</label>
+              <select
+                name="month"
+                id="credit-card-inner-month"
+                form="credit-card-inner-form"
+                required
+              >
+                <option selected disabled value="none">Month</option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="Septembe">Septembe</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+              </select>
+            </div>
+            <!-- //////////////////////credit-card-inner__month -->
+
+            <div class="credit-card-inner__year">
+              <select
+                name="year"
+                id="credit-card-inner__year"
+                form="credit-card-inner-form"
+                required
+              >
+                <option value="22">2022</option>
+                <option value="23">2023</option>
+                <option value="24">2024</option>
+                <option value="25">2025</option>
+                <option value="26">2026</option>
+                <option value="27">2027</option>
+                <option value="28">2028</option>
+              </select>
+            </div>
+            <!-- ///////////////////////////credit-card-inner__year -->
+            <div class="credit-card-inner__cw">
+              <label for="credit-card-inner-cw">CW</label>
+              <input
+                required
+                id="credit-card-inner-cw"
+                type="password"
+                name="cw"
+                maxlength="3"
+                minlength="3" 
+              />
+            </div>
+            <!-- ///////////credit-card-inner__cw -->
+          </div>
+          <!--////////// credit-card-inner__date-cw -->
+          <div class="credit-card-inner__button">
+            <button style="cursor: pointer;" >Submit</button>
+          </div>
+        </form>
+      </div>
     </div>
+
+    <!-- ////////container -->
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>

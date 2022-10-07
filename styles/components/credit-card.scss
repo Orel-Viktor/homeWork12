@@ -1,0 +1,61 @@
+.credit-card-inner {
+	padding: 70px 20px 20px 20px;
+	border-radius: 10px;
+	width: 40%;
+	background: rgb(26, 177, 94);
+	min-height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	
+	&__form { 
+		width: 80%;
+	}
+
+	&__number { 
+		display: flex;
+		flex-direction: column;
+		margin-bottom:  10px;
+	}
+
+	&__name { 
+		display: flex;
+		flex-direction: column;
+		margin-bottom:  10px;
+	}
+
+	&__date-cw { 
+		display: flex;
+		justify-content: space-between;
+		align-items: end;
+		margin-bottom: 10px;	
+	}
+
+	&__month { 
+		display: flex;
+		flex-direction: column;
+		width: 30%;
+	}
+
+	&__year {
+		display: flex;
+		width: 30%;
+	 }
+
+	&__cw { 
+		display: flex;
+		flex-direction: column;
+		width: 30%;
+	}
+
+	
+}
+
+.credit-card-inner input,
+.credit-card-inner select,
+.credit-card-inner button {
+	width: 100%;
+	border-radius: 5px;
+	min-height: 30px;
+	
+}
