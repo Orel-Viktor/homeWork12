@@ -20,16 +20,29 @@
       <!-- CREDIT CARD -->
 
       <div class="credit-card-inner">
-        <form action="#" id="credit-card-inner-form" class="credit-card-inner__form">
+        <div class="credit-card-inner__img">
+          <div class="credit-card-inner__img-number js--card-number-text">#### #### #### ####</div>
+          <div class="credit-card-inner__img-name-date">
+          <div class="credit-card-inner__img-name-label">Card Holder
+            <div class="credit-card-inner__img-name">Your Name</div>
+          </div>
+          <div class="credit-card-inner__img-date-label">Expires
+            <div class="credit-card-inner__img-date">MM/YY</div>
+          </div>
+          </div>
+          <!-- /////credit-card-inner__img-name-date -->
+        </div>
+        <!-- ///////credit-card-inner__img -->
+        <form action="#" id="credit-card-inner-form" class="credit-card-inner__form js--card-form">
           <div class="credit-card-inner__number">
-            <label for="credit-car-inner-number">Card number:</label>
-            <input type="password" name="number" id="credit-car-inner-number" maxlength="16"
+            <label for="credit-card-inner-number">Card number:</label>
+            <input class = "js--input-card-number" type="password"  name="number" id="credit-card-inner-number" maxlength="16"
             minlength="16" required/>
           </div>
           <!-- /////////credit-card-inner__number -->
           <div class="credit-card-inner__name">
             <label for="credit-card-inner-name">Name:</label>
-            <input type="text" name="name" id="credit-card-inner-name" required/>
+            <input class = "js--input-card-name" type="text" name="name" id="credit-card-inner-name" required/>
           </div>
           <!-- //////credit-card-inner__name -->
 
@@ -37,6 +50,7 @@
             <div class="credit-card-inner__month">
               <label for="credit-card-inner-month">Expiration Date</label>
               <select
+                class="js--card-month"
                 name="month"
                 id="credit-card-inner-month"
                 form="credit-card-inner-form"
@@ -61,6 +75,7 @@
 
             <div class="credit-card-inner__year">
               <select
+                class="js--card-year"
                 name="year"
                 id="credit-card-inner__year"
                 form="credit-card-inner-form"
@@ -81,6 +96,7 @@
               <label for="credit-card-inner-cw">CW</label>
               <input
                 required
+                class="js--input-card-cw"
                 id="credit-card-inner-cw"
                 type="password"
                 name="cw"
@@ -92,7 +108,7 @@
           </div>
           <!--////////// credit-card-inner__date-cw -->
           <div class="credit-card-inner__button">
-            <button style="cursor: pointer;" >Submit</button>
+            <button style="cursor: pointer;"  class="js--card-button">Submit</button>
           </div>
         </form>
       </div>
