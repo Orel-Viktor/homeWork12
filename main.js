@@ -1,5 +1,6 @@
-import './styles/main.scss'
+"use strict";
 
+import "./styles/main.scss";
 
 function Tasks(input, output) {
   this.input = document.querySelector(".js--input");
@@ -37,8 +38,6 @@ function Tasks(input, output) {
 const tasks = new Tasks(".js--input", ".js--myTasks");
 document.querySelector(".js--form").addEventListener("submit", tasks.addText);
 
-
-
 /* 2) Блок над формой (карточка) нужно сверстать через HTML. 
 При изменении полей формы нужно подставлять значения в нужные поля над формой (в саму карточку).
 
@@ -46,49 +45,47 @@ document.querySelector(".js--form").addEventListener("submit", tasks.addText);
 При желании, вы можете сделать форму и карточку проще. Например, опустить часть стилей 
 и сделать карточку просто в виде набора span тегов, в которые потом будет вставляться результат ввода в форму. */
 
+const formCard = document.querySelector(".js--card-form");
+const inputCardNumber = document.querySelector(".js--input-card-number");
+const inputCardName = document.querySelector(".js--input-card-name");
+const inputCardMonth = document.querySelector(".js--card-month");
+const inputCardYear = document.querySelector(".js--card-year");
+const buttonCard = document.querySelector(".js--card-button");
+const inputCardCw = document.querySelector(".js--input-card-cw");
 
-const formCard = document.querySelector('.js--card-form')
-const inputCardNumber = document.querySelector('.js--input-card-number')
-const inputCardName = document.querySelector('.js--input-card-name')
-const inputCardMonth = document.querySelector('.js--card-month') 
-const inputCardYear = document.querySelector('.js--card-year')
-const buttonCard = document.querySelector('.js--card-button')
-const inputCardCw = document.querySelector('.js--input-card-cw')
+formCard.addEventListener("submit", (event) => {
+  event.preventDefault();
+  getCardData();
+});
 
-
-
-
-formCard.addEventListener('submit',(event)=>{
-  event.preventDefault()
-  getCardData() 
-})
-
-function getCardData (){
+function getCardData() {
   console.log({
-    number:inputCardNumber.value,
+    number: inputCardNumber.value,
     userName: inputCardName.value,
     month: inputCardMonth.value,
     year: inputCardYear.value,
     cw: inputCardCw.value,
-  })
-  } 
+  });
+}
 
+inputCardNumber.addEventListener("input", function () {
+  let value = inputCardNumber.value;
+  let reg = /[A-Za-zA-яА-ЯЁё]/g;
+  inputCardNumber.value = value.replace(reg, "");
+  if (value.match(reg)) {
+    value = inputCardNumber.value.replace(reg, "");
+    inputCardNumber.classList.add("is-invalid");
+  } else {
+    inputCardNumber.classList.remove("is-invalid");
+    inputCardNumber.classList.add("is-valid");
+  }
+});
 
-  const cardNumberText = document.querySelector('.js--card-number-text')
-  inputCardNumber.addEventListener('input', function(){
-    let value = inputCardNumber.value
-    // console.log(typeof value)
-    // console.log(Number.isInteger(value))
-    // console.log(value)
-    // if(typeof inputCardNumber.innerText === 'string' ){
-    //   return
-    // }
-    // if(isNaN(value)){
-    //   alert('введите число')
-    //   return
-    // }
-    // if(typeof value === 'number' && Number.isInteger(value)) {
-    //   cardNumberText.innerText = value
-    // } 
-    cardNumberText.innerText = value
-  })
+const cardNumberText = document.querySelector(".js--card-number-text");
+inputCardNumber.addEventListener("input", function () {
+  let value = inputCardNumber.value;
+  cardNumberText.innerText = value;
+  if (value == 0) {
+    cardNumberText.innerText = "#### #### #### ####";
+  }
+});
