@@ -24,10 +24,14 @@
           <div class="credit-card-inner__img-number js--card-number-text">#### #### #### ####</div>
           <div class="credit-card-inner__img-name-date">
           <div class="credit-card-inner__img-name-label">Card Holder
-            <div class="credit-card-inner__img-name">Your Name</div>
+            <div class="credit-card-inner__img-name js--card-name-text">Your Name</div>
           </div>
           <div class="credit-card-inner__img-date-label">Expires
-            <div class="credit-card-inner__img-date">MM/YY</div>
+            <div class="credit-card-inner__img-date">
+           <div class="credit-card-inner__img-month  js--card-month-text">MM</div>
+           <div>/</div>
+           <div class="credit-card-inner__img-year  js--card-year-text">YY</div>
+            </div>
           </div>
           </div>
           <!-- /////credit-card-inner__img-name-date -->
@@ -36,8 +40,7 @@
         <form action="#" id="credit-card-inner-form" class="credit-card-inner__form js--card-form">
           <div class="credit-card-inner__number">
             <label for="credit-card-inner-number">Card number:</label>
-            <input class = "js--input-card-number" type="password"  name="number" id="credit-card-inner-number" maxlength="16"
-            minlength="16" required/>
+            <input class = "js--input-card-number" required type="password"  name="number" id="credit-card-inner-number"  maxlength="16" minlength="16" />
           </div>
           <!-- /////////credit-card-inner__number -->
           <div class="credit-card-inner__name">
@@ -57,18 +60,18 @@
                 required
               >
                 <option selected disable value="">Month</option>
-                <option value="January">January</option>
-                <option value="February">February</option>
-                <option value="March">March</option>
-                <option value="April">April</option>
-                <option value="May">May</option>
-                <option value="June">June</option>
-                <option value="July">July</option>
-                <option value="August">August</option>
-                <option value="Septembe">Septembe</option>
-                <option value="October">October</option>
-                <option value="November">November</option>
-                <option value="December">December</option>
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">Septembe</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
               </select>
             </div>
             <!-- //////////////////////credit-card-inner__month -->

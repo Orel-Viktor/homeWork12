@@ -67,9 +67,14 @@ function getCardData() {
     cw: inputCardCw.value,
   });
 }
+const cardNumberText = document.querySelector(".js--card-number-text");
+const cardNameText = document.querySelector(".js--card-name-text");
+const cardMonthText = document.querySelector(".js--card-month-text");
+const cardYearText = document.querySelector(".js--card-year-text");
 
 inputCardNumber.addEventListener("input", function () {
   let value = inputCardNumber.value;
+
   let reg = /[A-Za-zA-яА-ЯЁё]/g;
   inputCardNumber.value = value.replace(reg, "");
   if (value.match(reg)) {
@@ -81,11 +86,37 @@ inputCardNumber.addEventListener("input", function () {
   }
 });
 
-const cardNumberText = document.querySelector(".js--card-number-text");
 inputCardNumber.addEventListener("input", function () {
   let value = inputCardNumber.value;
   cardNumberText.innerText = value;
   if (value == 0) {
     cardNumberText.innerText = "#### #### #### ####";
   }
+});
+
+inputCardName.addEventListener("input", function () {
+  let value = inputCardName.value;
+  cardNameText.innerText = value;
+  cardNameText.style.textTransform = "uppercase";
+  if (value == 0) {
+    cardNameText.style.textTransform = "none";
+    cardNameText.innerText = "Your Name";
+  }
+});
+
+inputCardMonth.addEventListener("change", function () {
+  let value = inputCardMonth.value;
+  cardMonthText.innerText = value;
+  if (value == 0) {
+    cardMonthText.innerText = "MM";
+  }
+});
+
+inputCardYear.addEventListener("change", function () {
+  let value = inputCardYear.value;
+  cardYearText.innerText = value;
+  if (value == 0) {
+    cardYearText.innerText = "YY";
+  }
+  console.log(value);
 });
