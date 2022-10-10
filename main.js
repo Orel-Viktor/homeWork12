@@ -80,10 +80,12 @@ inputCardNumber.addEventListener("input", function () {
   if (value.match(reg)) {
     value = inputCardNumber.value.replace(reg, "");
     inputCardNumber.classList.add("is-invalid");
+    inputCardNumber.classList.remove("is-valid");
   } else {
     inputCardNumber.classList.remove("is-invalid");
     inputCardNumber.classList.add("is-valid");
   }
+ 
 });
 
 inputCardNumber.addEventListener("input", function () {
@@ -91,6 +93,7 @@ inputCardNumber.addEventListener("input", function () {
   cardNumberText.innerText = value;
   if (value == 0) {
     cardNumberText.innerText = "#### #### #### ####";
+    inputCardNumber.classList.remove("is-valid");
   }
 });
 
