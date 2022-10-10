@@ -54,6 +54,7 @@ const buttonCard = document.querySelector(".js--card-button");
 const inputCardCw = document.querySelector(".js--input-card-cw");
 
 formCard.addEventListener("submit", (event) => {
+  console.log(inputCardNumber.value);
   event.preventDefault();
   getCardData();
 });
@@ -67,6 +68,9 @@ function getCardData() {
     cw: inputCardCw.value,
   });
 }
+
+const cardImgText = document.querySelector(".js--credit-card-inner-img");
+const cardCwText = document.querySelector(".js-card-cw-text");
 const cardNumberText = document.querySelector(".js--card-number-text");
 const cardNameText = document.querySelector(".js--card-name-text");
 const cardMonthText = document.querySelector(".js--card-month-text");
@@ -74,9 +78,9 @@ const cardYearText = document.querySelector(".js--card-year-text");
 
 inputCardNumber.addEventListener("input", function () {
   let value = inputCardNumber.value;
-
   let reg = /[A-Za-zA-яА-ЯЁё]/g;
   inputCardNumber.value = value.replace(reg, "");
+  cardNumberText.innerText = value;
   if (value.match(reg)) {
     value = inputCardNumber.value.replace(reg, "");
     inputCardNumber.classList.add("is-invalid");
@@ -85,7 +89,6 @@ inputCardNumber.addEventListener("input", function () {
     inputCardNumber.classList.remove("is-invalid");
     inputCardNumber.classList.add("is-valid");
   }
- 
 });
 
 inputCardNumber.addEventListener("input", function () {
@@ -121,5 +124,19 @@ inputCardYear.addEventListener("change", function () {
   if (value == 0) {
     cardYearText.innerText = "YY";
   }
-  console.log(value);
+});
+
+inputCardCw.addEventListener("input", function () {
+  cardImgText.classList.add("js--front");
+  cardCwText.classList.add("js--back");
+  let value = inputCardCw.value;
+  cardCwText.innerText = value;
+  if (value == 0) {
+    cardCwText.innerText = "CW";
+  }
+});
+
+inputCardCw.addEventListener("change", function () {
+  cardImgText.classList.remove("js--front");
+  cardCwText.classList.remove("js--back");
 });

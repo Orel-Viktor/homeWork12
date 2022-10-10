@@ -1,0 +1,252 @@
+.credit-card-inner {
+  position: relative;
+  padding: 70px 20px 20px 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  background: #1ab15e;
+  min-height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.credit-card-inner__rotate {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  min-height: 130px;
+  max-width: 250px;
+  width: 100%;
+  cursor: pointer;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.credit-card-inner__img {
+  position: absolute;
+  min-height: 130px;
+  max-width: 250px;
+  width: 100%;
+  background: black;
+  border-radius: 10px;
+  color: white;
+  font-size: 10px;
+  line-height: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px 20px 20px 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.credit-card-inner__img-cw {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px 20px 20px 200px;
+  min-height: 130px;
+  max-width: 250px;
+  width: 100%;
+  background: black;
+  border-radius: 10px;
+  color: white;
+  font-size: 10px;
+  line-height: 14px;
+  background: black;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.credit-card-inner__img-number {
+  font-size: 16px;
+}
+
+.credit-card-inner__img-name-date {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.credit-card-inner__img-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.credit-card-inner__form {
+  width: 80%;
+}
+
+.credit-card-inner__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.credit-card-inner__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.credit-card-inner__date-cw {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  margin-bottom: 10px;
+}
+
+.credit-card-inner__month {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 30%;
+}
+
+.credit-card-inner__year {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+}
+
+.credit-card-inner__cw {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 30%;
+}
+
+.credit-card-inner input,
+.credit-card-inner select,
+.credit-card-inner button {
+  width: 100%;
+  border-radius: 5px;
+  min-height: 30px;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 30px 0 30px;
+}
+
+.is-valid {
+  -webkit-box-shadow: inset 0px 0px 40px -17px #36d93c;
+          box-shadow: inset 0px 0px 40px -17px #36d93c;
+}
+
+.is-invalid {
+  -webkit-box-shadow: inset 0px 0px 40px -7px #d93636;
+          box-shadow: inset 0px 0px 40px -7px #d93636;
+}
+
+.front {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.back {
+  -webkit-transform: rotateY(180deg) translate(-50%, 50%);
+          transform: rotateY(180deg) translate(-50%, 50%);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.credit-card-inner__rotate:hover .front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.credit-card-inner__rotate:hover .back {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
+.js--front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.js--back {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+/*# sourceMappingURL=main.css.map */

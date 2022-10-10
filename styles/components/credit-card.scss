@@ -1,111 +1,160 @@
 .credit-card-inner {
-	position: relative;
-	padding: 70px 20px 20px 20px;
-	border-radius: 10px;
-	width: 100%;
-	max-width: 500px;
-	background: rgb(26, 177, 94);
-	min-height: 300px;
-	display: flex;
-	flex-direction: column;
-	justify-content: end;
+  position: relative;
+  padding: 70px 20px 20px 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  background: rgb(26, 177, 94);
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 
-	&__img{
-		 position: absolute;
-		 top: -50%;
-		 left: 50%;
-		 transform: translate(-50%, 50%);
-         min-height:130px ;
-		 max-width: 250px;
-		 width: 100%;
-		 background: black;
-		 border-radius: 10px;
-		 color: white;
-		 font-size: 10px;
-		 line-height: 14px;
+  &__rotate {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    min-height: 130px;
+    max-width: 250px;
+    width: 100%;
+    cursor: pointer;
+    perspective: 1000px;
+  }
 
-		 display: flex;
-		 flex-direction: column;
-		 align-items: center;
-		 padding: 50px 20px 20px 20px;
-		 justify-content: space-between;
-	}
+  &__img {
+    position: absolute;
 
-	&__img-number{
-		font-size: 16px;
+    min-height: 130px;
+    max-width: 250px;
+    width: 100%;
+    background: black;
+    border-radius: 10px;
+    color: white;
+    font-size: 10px;
+    line-height: 14px;
 
-	}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px 20px 20px;
+    justify-content: space-between;
 
-	&__img-name-date{
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-	}
-	
+    cursor: pointer;
+    backface-visibility: hidden;
+    transition: 1s;
+  }
 
-	&__img-name{
-		
-	}
+  &__img-cw {
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 50px 20px 20px 200px;
 
-	&__img-date{
-		display: flex;
-		
-	}
-	&__img-month{
-		
-	}
-	&__img-year{
-		
-	}
-	
-	&__form { 
-		width: 80%;
-	}
+    min-height: 130px;
+    max-width: 250px;
+    width: 100%;
+    background: black;
+    border-radius: 10px;
+    color: white;
+    font-size: 10px;
+    line-height: 14px;
 
-	&__number { 
-		display: flex;
-		flex-direction: column;
-		margin-bottom:  10px;
-	}
+    background: black;
 
-	&__name { 
-		display: flex;
-		flex-direction: column;
-		margin-bottom:  10px;
-	}
+    cursor: pointer;
+    backface-visibility: hidden;
+  }
 
-	&__date-cw { 
-		display: flex;
-		justify-content: space-between;
-		align-items: end;
-		margin-bottom: 10px;	
-	}
+  &__img-number {
+    font-size: 16px;
+  }
 
-	&__month { 
-		display: flex;
-		flex-direction: column;
-		width: 30%;
-	}
+  &__img-name-date {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 
-	&__year {
-		display: flex;
-		width: 30%;
-	 }
+  &__img-name {
+  }
 
-	&__cw { 
-		display: flex;
-		flex-direction: column;
-		width: 30%;
-	}
+  &__img-date {
+    display: flex;
+  }
+  &__img-month {
+  }
+  &__img-year {
+  }
 
-	
+  &__form {
+    width: 80%;
+  }
+
+  &__number {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  &__date-cw {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 10px;
+  }
+
+  &__month {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
+
+  &__year {
+    display: flex;
+    width: 30%;
+  }
+
+  &__cw {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
 }
 
 .credit-card-inner input,
 .credit-card-inner select,
 .credit-card-inner button {
-	width: 100%;
-	border-radius: 5px;
-	min-height: 30px;
-	
+  width: 100%;
+  border-radius: 5px;
+  min-height: 30px;
+}
+
+.front {
+  transition: 1s;
+}
+.back {
+  transform: rotateY(180deg) translate(-50%, 50%);
+  transition: 1s;
+}
+
+.credit-card-inner__rotate:hover .front {
+  transform: rotateY(180deg);
+}
+.credit-card-inner__rotate:hover .back {
+  transform: rotateY(360deg);
+}
+
+.js--front {
+  transform: rotateY(180deg);
+}
+.js--back {
+  transform: rotateY(360deg);
 }
