@@ -2,7 +2,7 @@
 
 import "./styles/main.scss";
 
-function Tasks(input, output) {
+function Tasks() {
   this.input = document.querySelector(".js--input");
   this.output = document.querySelector(".js--myTasks");
 
@@ -35,7 +35,7 @@ function Tasks(input, output) {
   };
 }
 
-const tasks = new Tasks(".js--input", ".js--myTasks");
+const tasks = new Tasks();
 document.querySelector(".js--form").addEventListener("submit", tasks.addText);
 
 /* 2) Блок над формой (карточка) нужно сверстать через HTML. 
@@ -50,11 +50,10 @@ const inputCardNumber = document.querySelector(".js--input-card-number");
 const inputCardName = document.querySelector(".js--input-card-name");
 const inputCardMonth = document.querySelector(".js--card-month");
 const inputCardYear = document.querySelector(".js--card-year");
-const buttonCard = document.querySelector(".js--card-button");
+
 const inputCardCw = document.querySelector(".js--input-card-cw");
 
 formCard.addEventListener("submit", (event) => {
-  console.log(inputCardNumber.value);
   event.preventDefault();
   getCardData();
 });
